@@ -12,9 +12,13 @@ to build and install xlaunch, type:
 (this will install xlaunch to /usr/local/bin)
 
 try
+
  $ make help
+
 and
+
  $ make options
+
 for information on reconfiguring the build process via environment variables.
 
 

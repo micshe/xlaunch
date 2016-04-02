@@ -1,5 +1,5 @@
 #xlaunch 
-runs a GUI app and prints the X window-id of the app to stdout, and exits.  useful for launching apps for embedding into other windows.
+runs a GUI app, prints the X window-id of the app to stdout, then exits.  useful for getting a handle on a specific instance of an app in order to embed it into another window.
 
 #build
 
@@ -33,12 +33,12 @@ for information on reconfiguring the build process via environment variables.
 
 to disable the 'xlaunch is waiting...' animation, try:
 
- $ xlaunch gedit 2>/dev/null 
+ $ xlaunch ____ 2>/dev/null 
 
 
 to disable the stdout and stderr of the GUI app, but not the output of xlaunch, try:
 
- $ xlaunch sh -c "gedit *.c > /dev/null 2>&1"  
+ $ xlaunch sh -c "____ *.c > /dev/null 2>&1"  
 
 
 #caveats 
@@ -54,6 +54,7 @@ xlaunch is stitched together from the internals of xprop, so inherits its licens
 
 
 #future work
-have xlaunch ignore new override_redirect windows (which will typically be splasah screens)
+have xlaunch ignore new override_redirect windows (which will typically be splash screens)
+
 have xlaunch follow the Freedesktop.org Startup ID Specification, so the window-manager can change the mouse cursor to 'busy' until the app has launched.
 
